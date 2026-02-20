@@ -27,7 +27,7 @@ export function QuoteFormDialog({ packageName, variant = "default", className, c
     name: "",
     email: "",
     phone: "",
-    company: "",
+    fabric: "",
     package: packageName || "",
     message: "",
   })
@@ -35,14 +35,12 @@ export function QuoteFormDialog({ packageName, variant = "default", className, c
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("[v0] Quote form submitted:", formData)
-    // Here you would typically send the form data to your backend
     setOpen(false)
-    // Reset form
     setFormData({
       name: "",
       email: "",
       phone: "",
-      company: "",
+      fabric: "",
       package: packageName || "",
       message: "",
     })
@@ -52,14 +50,14 @@ export function QuoteFormDialog({ packageName, variant = "default", className, c
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button variant={variant} className={className}>
-          {children || "Запросить расчет"}
+          {children || "Рассчитать стоимость"}
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Запросить расчет</DialogTitle>
+          <DialogTitle>Рассчитать стоимость</DialogTitle>
           <DialogDescription>
-            Заполните форму, и мы свяжемся с вами в ближайшее время для бесплатной консультации.
+            Заполните форму — мы рассчитаем стоимость и свяжемся с вами для уточнения деталей.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
@@ -70,19 +68,7 @@ export function QuoteFormDialog({ packageName, variant = "default", className, c
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Ваше полное имя"
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="email">E-mail *</Label>
-            <Input
-              id="email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="your@email.ru"
+              placeholder="Ваше имя"
             />
           </div>
 
@@ -99,41 +85,61 @@ export function QuoteFormDialog({ packageName, variant = "default", className, c
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="company">Компания (необязательно)</Label>
+            <Label htmlFor="email">E-mail</Label>
             <Input
-              id="company"
-              value={formData.company}
-              onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-              placeholder="Название компании"
+              id="email"
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              placeholder="your@email.ru"
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="package">Тариф *</Label>
+            <Label htmlFor="fabric">Ткань</Label>
             <Select
-              value={formData.package}
-              onValueChange={(value) => setFormData({ ...formData, package: value })}
+              value={formData.fabric}
+              onValueChange={(value) => setFormData({ ...formData, fabric: value })}
             >
-              <SelectTrigger id="package">
-                <SelectValue placeholder="Выберите тариф" />
+              <SelectTrigger id="fabric">
+                <SelectValue placeholder="Выберите ткань" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Базовый">Базовый</SelectItem>
-                <SelectItem value="Про">Про</SelectItem>
-                <SelectItem value="Индивидуальный">Индивидуальный</SelectItem>
-                <SelectItem value="Еще не определился">Еще не определился</SelectItem>
+                <SelectItem value="Бязь">Бязь</SelectItem>
+                <SelectItem value="Поплин">Поплин</SelectItem>
+                <SelectItem value="Перкаль">Перкаль</SelectItem>
+                <SelectItem value="Сатин">Сатин</SelectItem>
+                <SelectItem value="Не определился">Ещё не определился</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message">Описание проекта *</Label>
+            <Label htmlFor="package">Комплект *</Label>
+            <Select
+              value={formData.package}
+              onValueChange={(value) => setFormData({ ...formData, package: value })}
+            >
+              <SelectTrigger id="package">
+                <SelectValue placeholder="Что нужно сшить?" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Простыня на резинке">Простыня на резинке</SelectItem>
+                <SelectItem value="Полный комплект">Полный комплект</SelectItem>
+                <SelectItem value="Индивидуальный">Индивидуальный заказ</SelectItem>
+                <SelectItem value="Ещё не определился">Ещё не определился</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="message">Размеры и пожелания *</Label>
             <Textarea
               id="message"
               required
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Расскажите о проекте, пожеланиях и сроках..."
+              placeholder="Укажите размеры матраса (длина × ширина × высота), количество наволочек и пододеяльников..."
               rows={4}
             />
           </div>

@@ -1,42 +1,42 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Layout, Palette, Code, Share2, Target, Search } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const services = [
   {
-    icon: Layout,
-    title: "Веб-дизайн",
+    icon: "Ruler",
+    title: "Индивидуальные размеры",
     description:
-      "Мы создаем сайты, которые не только визуально привлекательны, но и функциональны, удобны в использовании. В CodeCraft ваш бренд в центре внимания — мы обеспечиваем соответствие онлайн-присутствия целям и ценностям вашего бизнеса.",
+      "Шьём постельное бельё точно по вашим меркам. Нестандартная кровать, необычный матрас — для нас нет ограничений. Каждый комплект идеально подойдёт именно вам.",
   },
   {
-    icon: Palette,
-    title: "Графический дизайн",
+    icon: "Leaf",
+    title: "100% хлопок",
     description:
-      "От логотипов до постов в соцсетях — мы создаем креативные графические решения, усиливающие ваш бренд. Наши дизайны уникальны и профессиональны, производя нужное впечатление на целевую аудиторию.",
+      "Используем только натуральные ткани — бязь, поплин, перкаль и сатин. Никакой синтетики. Приятные к телу, дышащие и гипоаллергенные материалы для здорового сна.",
   },
   {
-    icon: Code,
-    title: "Веб-разработка",
+    icon: "Scissors",
+    title: "Качественный пошив",
     description:
-      "Мы создаем технически надежные и перспективные сайты. Наша команда обеспечивает надежность, масштабируемость и скорость, помогая вашему бизнесу расти в цифровом пространстве.",
+      "Аккуратные швы, прочные нити и внимание к каждой детали. Наше бельё выдерживает сотни стирок и сохраняет первоначальный вид надолго.",
   },
   {
-    icon: Share2,
-    title: "Соцсети",
+    icon: "Package",
+    title: "Любая комплектация",
     description:
-      "Сильное присутствие в социальных сетях сегодня решает многое. Мы поможем создать впечатление с помощью привлекательных визуалов и эффективных стратегий, чтобы ваш бренд оставался заметным.",
+      "Простыни на резинке, пододеяльники, наволочки любых размеров. Соберите комплект именно так, как нужно вам — без навязанных вариантов.",
   },
   {
-    icon: Target,
-    title: "Результат",
+    icon: "Truck",
+    title: "Доставка по России",
     description:
-      "В CodeCraft мы нацелены на успех. Наш подход всегда направлен на достижение измеримых результатов, способствующих росту вашего бизнеса. Вместе находим то, что действительно работает.",
+      "Отправляем заказы через популярные службы доставки по всей России. Быстро и надёжно доставим ваш заказ в любой уголок страны.",
   },
   {
-    icon: Search,
-    title: "SEO",
+    icon: "ShieldCheck",
+    title: "Проверенные поставщики",
     description:
-      "Видимость в поиске критически важна. Мы оптимизируем сайт с применением современных SEO-техник, чтобы вы были выше в Google и целевая аудитория легко вас находила.",
+      "Работаем только с проверенными производителями тканей. За 14 лет работы мы отобрали лучших поставщиков, которым доверяем качество каждого метра.",
   },
 ]
 
@@ -47,13 +47,13 @@ export function ServicesSection() {
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mx-auto block w-fit">
-          Наша экспертиза
+          Наши преимущества
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 text-balance">
-          В чем мы <span className="text-primary">сильны</span>
+          Почему выбирают <span className="text-primary">ПОСТЕЛЬСАР</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-3xl mx-auto text-pretty leading-relaxed text-lg">
-          От концепции до запуска — мы трансформируем ваши цифровые амбиции в мощные онлайн-решения, приносящие результат.
+          Шьём постельное бельё на заказ с 2011 года. Индивидуальный подход к каждому клиенту и только натуральные ткани.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -63,7 +63,7 @@ export function ServicesSection() {
             >
               <CardHeader>
                 <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                  <service.icon className="h-6 w-6" />
+                  <Icon name={service.icon} size={24} />
                 </div>
                 <CardTitle className="text-xl group-hover:text-primary transition-colors">{service.title}</CardTitle>
               </CardHeader>

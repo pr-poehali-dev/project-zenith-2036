@@ -17,7 +17,6 @@ export function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("[v0] Form submitted:", formData)
-    // Handle form submission
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,10 +37,10 @@ export function ContactSection() {
             Контакты
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Давайте <span className="text-primary">создавать вместе</span>
+            Давайте <span className="text-primary">обсудим ваш заказ</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Готовы воплотить ваши цифровые амбиции? Свяжитесь с нами без обязательств и узнайте, чем мы можем помочь.
+            Напишите нам — расскажем о тканях, поможем с размерами и рассчитаем стоимость вашего комплекта.
           </p>
         </div>
 
@@ -107,7 +106,7 @@ export function ContactSection() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Расскажите о вашем проекте..."
+                      placeholder="Расскажите, какое бельё вам нужно: размеры кровати, предпочтения по ткани, количество комплектов..."
                       rows={6}
                       required
                       className="transition-all focus:scale-[1.02]"
@@ -115,7 +114,7 @@ export function ContactSection() {
                   </div>
                   <Button type="submit" size="lg" className="w-full sm:w-auto group">
                     <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    Отправить
+                    Отправить заявку
                   </Button>
                 </form>
               </CardContent>
@@ -131,7 +130,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">E-mail</h3>
-                    <p className="text-sm text-muted-foreground">hello@example.com</p>
+                    <p className="text-sm text-muted-foreground">info@postelsar.ru</p>
                   </div>
                 </div>
               </CardContent>
@@ -162,7 +161,7 @@ export function ContactSection() {
                     <p className="text-sm text-muted-foreground">
                       Пн - Пт: 9:00 - 18:00
                       <br />
-                      Выходные: по договоренности
+                      Сб: 10:00 - 15:00
                     </p>
                   </div>
                 </div>

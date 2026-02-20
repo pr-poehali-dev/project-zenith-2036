@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export function Footer() {
   return (
@@ -6,9 +6,9 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">CodeCraft</h3>
+            <h3 className="text-xl font-bold mb-4">ПОСТЕЛЬСАР</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              2025 CodeCraft. Все права защищены.
+              Пошив постельного белья на заказ из натуральных тканей с 2011 года. Доставка по всей России.
             </p>
           </div>
 
@@ -22,12 +22,12 @@ export function Footer() {
               </li>
               <li>
                 <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Услуги
+                  Преимущества
                 </a>
               </li>
               <li>
                 <a href="#portfolio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Портфолио
+                  Ткани
                 </a>
               </li>
               <li>
@@ -42,33 +42,30 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Мы в соцсетях</h4>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+                <Icon name="MessageCircle" size={20} />
+                <span className="sr-only">WhatsApp</span>
               </a>
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+                <Icon name="Send" size={20} />
+                <span className="sr-only">Telegram</span>
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
+                <Icon name="Instagram" size={20} />
+                <span className="sr-only">Instagram</span>
               </a>
             </div>
+            <p className="text-xs text-muted-foreground mt-6">
+              © 2011–2026 ПОСТЕЛЬСАР. Все права защищены.
+            </p>
           </div>
         </div>
       </div>

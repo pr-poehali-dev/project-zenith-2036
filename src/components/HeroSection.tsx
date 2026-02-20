@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Code2, Palette } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { useEffect, useState } from "react"
 
 export function HeroSection() {
@@ -33,7 +34,6 @@ export function HeroSection() {
             animationDelay: "1s",
           }}
         />
-        {/* Subtle mouse-following gradient */}
         <div
           className="absolute w-[300px] h-[300px] rounded-full bg-muted/20 blur-3xl transition-all duration-1000 ease-out"
           style={{
@@ -44,45 +44,36 @@ export function HeroSection() {
       </div>
 
       <div className="absolute inset-0 pointer-events-none">
-        <Code2
+        <div
           className="absolute text-muted-foreground/30 animate-float"
-          style={{
-            top: "15%",
-            left: "15%",
-            animationDelay: "0s",
-          }}
-          size={40}
-        />
-        <Palette
+          style={{ top: "15%", left: "15%", animationDelay: "0s" }}
+        >
+          <Icon name="Scissors" size={40} />
+        </div>
+        <div
           className="absolute text-muted-foreground/30 animate-float"
-          style={{
-            top: "25%",
-            right: "20%",
-            animationDelay: "2s",
-          }}
-          size={35}
-        />
-        <Sparkles
+          style={{ top: "25%", right: "20%", animationDelay: "2s" }}
+        >
+          <Icon name="Shirt" size={35} />
+        </div>
+        <div
           className="absolute text-muted-foreground/30 animate-float"
-          style={{
-            bottom: "20%",
-            left: "20%",
-            animationDelay: "1s",
-          }}
-          size={30}
-        />
+          style={{ bottom: "20%", left: "20%", animationDelay: "1s" }}
+        >
+          <Icon name="Sparkles" size={30} />
+        </div>
       </div>
 
       <div className="container mx-auto text-center max-w-5xl relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6 animate-fade-in-up">
-          <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-primary">Профессиональный веб-дизайн и разработка</span>
+          <Icon name="Sparkles" size={16} className="text-primary" />
+          <span className="text-sm font-medium text-primary">Пошив постельного белья на заказ</span>
         </div>
 
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-fade-in-up text-balance">
-          Сайты, которые{" "}
+          Бельё, которое{" "}
           <span className="text-primary relative inline-block">
-            впечатляют
+            идеально
             <svg
               className="absolute -bottom-2 left-0 w-full"
               height="12"
@@ -102,7 +93,7 @@ export function HeroSection() {
         </h1>
 
         <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto animate-fade-in-up animate-delay-100 leading-relaxed">
-          От концепции до запуска. Мы создаем современные, быстрые и результативные сайты, которые выводят ваш бизнес на новый уровень.
+          Шьём постельное бельё по вашим размерам из 100% хлопка. Бязь, поплин, перкаль и сатин от проверенных поставщиков. Качественно с 2011 года.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-200 mb-12">
@@ -112,7 +103,7 @@ export function HeroSection() {
             asChild
           >
             <a href="#contact">
-              Начать проект
+              Заказать пошив
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
@@ -122,22 +113,22 @@ export function HeroSection() {
             className="border-2 border-primary/20 text-foreground hover:bg-primary/5 hover:border-primary font-semibold px-8 py-6 text-lg backdrop-blur-sm bg-transparent"
             asChild
           >
-            <a href="#portfolio">Наши работы</a>
+            <a href="#pricing">Наши тарифы</a>
           </Button>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground animate-fade-in-up animate-delay-300">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span>50+ проектов</span>
+            <span>С 2011 года</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: "0.5s" }} />
-            <span>45+ довольных клиентов</span>
+            <span>100% хлопок</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: "1s" }} />
-            <span>3+ года опыта</span>
+            <span>Доставка по всей России</span>
           </div>
         </div>
       </div>

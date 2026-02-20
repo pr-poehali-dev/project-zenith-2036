@@ -4,27 +4,27 @@ import { QuoteFormDialog } from "@/components/QuoteFormDialog"
 
 const pricingTiers = [
   {
-    name: "Базовый",
-    price: "99 900",
+    name: "Простыня на резинке",
+    price: "1 200",
     features: [
-      "До 5 страниц",
-      "Адаптивный дизайн",
-      "Базовая SEO-оптимизация",
-      "Форма обратной связи",
-      "1 месяц поддержки",
+      "Пошив по вашим размерам",
+      "Бязь, поплин или перкаль",
+      "Надёжная резинка по периметру",
+      "Плотная посадка на матрас",
+      "Срок пошива — от 3 дней",
     ],
     highlighted: false,
   },
   {
-    name: "Про",
-    price: "249 900",
+    name: "Полный комплект",
+    price: "3 500",
     features: [
-      "До 15 страниц",
-      "Премиум-дизайн",
-      "Расширенная SEO-оптимизация",
-      "Интеграция CMS",
-      "Функционал e-commerce",
-      "3 месяца поддержки",
+      "Простыня на резинке",
+      "Пододеяльник по размеру",
+      "2 наволочки на выбор",
+      "Любая ткань — бязь, поплин, перкаль, сатин",
+      "Индивидуальная комплектация",
+      "Срок пошива — от 5 дней",
     ],
     highlighted: true,
   },
@@ -32,11 +32,11 @@ const pricingTiers = [
     name: "Индивидуальный",
     price: "По запросу",
     features: [
-      "Неограниченно страниц",
-      "Кастомный функционал",
-      "API-интеграции",
-      "Персональный менеджер",
-      "6 месяцев поддержки",
+      "Нестандартные размеры",
+      "Сатин и премиум-ткани",
+      "Особая комплектация",
+      "Вышивка или декор",
+      "Консультация по подбору",
     ],
     highlighted: false,
   },
@@ -60,10 +60,10 @@ export function PricingSection() {
             Прозрачные цены
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-balance">
-            Выберите <span className="text-primary">идеальный тариф</span> для вашего проекта
+            Выберите <span className="text-primary">свой комплект</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            От стартапов до крупного бизнеса — у нас есть подходящее решение
+            Честные цены без скрытых наценок. Стоимость зависит от размера и выбранной ткани.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export function PricingSection() {
                   variant={tier.highlighted ? "default" : "outline"}
                   className={`w-full ${tier.highlighted ? "shadow-lg shadow-primary/20" : ""}`}
                 >
-                  {tier.price === "По запросу" ? "Связаться с нами" : "Выбрать тариф"}
+                  {tier.price === "По запросу" ? "Связаться с нами" : "Заказать"}
                 </QuoteFormDialog>
               </CardContent>
             </Card>
@@ -121,8 +121,8 @@ export function PricingSection() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Все тарифы включают <span className="text-primary font-semibold">бесплатную настройку хостинга</span> и{" "}
-            <span className="text-primary font-semibold">SSL-сертификат</span>
+            Все цены указаны <span className="text-primary font-semibold">за базовый размер</span>. Точная стоимость рассчитывается{" "}
+            <span className="text-primary font-semibold">по вашим размерам</span>
           </p>
         </div>
       </div>

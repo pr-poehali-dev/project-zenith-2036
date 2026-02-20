@@ -1,20 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle2, Sparkles } from "lucide-react"
+import { CheckCircle2 } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const values = [
-  { title: "Качество", description: "Высококлассные решения, соответствующие самым высоким стандартам" },
-  { title: "Доступность", description: "Профессиональные сайты по честным и прозрачным ценам" },
-  { title: "Прозрачность", description: "Четкая коммуникация без скрытых платежей" },
-  { title: "Клиентоориентированность", description: "Ваши цели и пожелания всегда в приоритете" },
-  { title: "Масштабируемость", description: "Сайты, которые растут вместе с вашим бизнесом" },
-  { title: "Гибкость", description: "Быстрая адаптация под меняющиеся потребности" },
+  { title: "Натуральные ткани", description: "Только 100% хлопок — бязь, поплин, перкаль и сатин" },
+  { title: "Точные размеры", description: "Пошив точно по вашим меркам, без компромиссов" },
+  { title: "Честные цены", description: "Прозрачное ценообразование без скрытых наценок" },
+  { title: "Быстрый пошив", description: "Оперативное выполнение заказов без потери качества" },
+  { title: "Надёжная доставка", description: "Отправка через проверенные службы по всей России" },
+  { title: "Гибкая комплектация", description: "Соберите комплект под свои потребности" },
 ]
 
 const stats = [
-  { number: "50+", label: "Проектов" },
-  { number: "45+", label: "Довольных клиентов" },
-  { number: "30+", label: "Созданных логотипов" },
-  { number: "3+", label: "Года опыта" },
+  { number: "14+", label: "Лет опыта" },
+  { number: "1000+", label: "Выполненных заказов" },
+  { number: "4", label: "Вида ткани" },
+  { number: "RU", label: "Доставка по стране" },
 ]
 
 export function AboutSection() {
@@ -26,20 +27,20 @@ export function AboutSection() {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-            <Sparkles className="h-4 w-4" />
-            О CodeCraft
+            <Icon name="Sparkles" size={16} />
+            О ПОСТЕЛЬСАР
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Качество, которое{" "}
+            Качество, проверенное{" "}
             <span className="text-primary relative">
-              впечатляет
+              временем
               <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none">
                 <path d="M0 4C50 2 150 6 200 4" stroke="currentColor" strokeWidth="2" className="text-primary" />
               </svg>
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Создание сайта не должно быть дорогим. Мы разрабатываем индивидуальные решения, которые идеально соответствуют пожеланиям каждого клиента.
+            С 2011 года мы шьём постельное бельё, которое дарит комфорт и уют. Каждый комплект создаётся с заботой о вашем здоровом сне.
           </p>
         </div>
 

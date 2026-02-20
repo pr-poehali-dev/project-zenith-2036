@@ -1,27 +1,28 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Lightbulb, PaletteIcon, Rocket, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import Icon from "@/components/ui/icon"
 import { Fragment } from "react"
 
 const steps = [
   {
-    icon: Lightbulb,
-    title: "Концепция и планирование",
+    icon: "MessageSquare",
+    title: "Обсуждаем заказ",
     description:
-      "Вместе обсуждаем вашу идею, цели и видение сайта. Разрабатываем четкий план, соответствующий вашим пожеланиям, с правильной структурой и функциональностью.",
+      "Вы сообщаете нужные размеры, выбираете ткань и комплектацию. Мы консультируем и помогаем определиться с лучшим вариантом для вас.",
     number: "01",
   },
   {
-    icon: PaletteIcon,
-    title: "Разработка и дизайн",
+    icon: "Scissors",
+    title: "Шьём бельё",
     description:
-      "Наши разработчики и дизайнеры приступают к созданию сайта. Фокусируемся на стильном дизайне, удобном для пользователей и технически безупречном.",
+      "Наши мастера раскраивают ткань точно по вашим размерам и аккуратно сшивают каждый элемент. Контроль качества на каждом этапе.",
     number: "02",
   },
   {
-    icon: Rocket,
-    title: "Тестирование и запуск",
+    icon: "Truck",
+    title: "Доставляем заказ",
     description:
-      "Тщательно тестируем сайт для обеспечения оптимальной производительности. После вашего одобрения запускаем проект и остаемся на связи для поддержки.",
+      "Бережно упаковываем и отправляем удобной для вас службой доставки. Вы получаете идеальное бельё прямо к порогу.",
     number: "03",
   },
 ]
@@ -34,13 +35,13 @@ export function ProcessSection() {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-4 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-            Наш процесс
+            Как мы работаем
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">
-            От <span className="text-primary">идеи</span> к <span className="text-primary">результату</span>
+            От <span className="text-primary">заявки</span> до <span className="text-primary">доставки</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            В три простых шага превращаем вашу идею в мощное онлайн-присутствие, приносящее результат.
+            Три простых шага — и вы получаете постельное бельё, сшитое специально для вас.
           </p>
         </div>
 
@@ -55,7 +56,7 @@ export function ProcessSection() {
                 </div>
                 <CardHeader>
                   <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 w-fit group-hover:scale-110 group-hover:rotate-6">
-                    <step.icon className="h-6 w-6" />
+                    <Icon name={step.icon} size={24} />
                   </div>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">{step.title}</CardTitle>
                 </CardHeader>
